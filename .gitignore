@@ -1,0 +1,68 @@
+# Ignore build directories
+/build/
+/out/
+/Debug/
+/Release/
+/obj/
+
+# Ignore IDE-specific files
+/.vs/
+/.vscode/
+/.idea/
+/.settings/
+/.project
+/.cproject
+/.mxproject
+
+# Ignore compiled binaries and object files
+/*.elf
+/*.hex
+/*.bin
+/*.map
+/*.lst
+/*.o
+/*.d
+/*.su
+
+# Ignore generated files
+/*.axf
+/*.log
+/*.dep
+/*.depend
+
+# Ignore temporary files
+/*.swp
+/*.swo
+/*~*
+
+# Ignore user-specific files
+/*.user
+/*.uvguix*
+/*.uvoptx
+/*.uvprojx
+
+# Ignore CMSIS and HAL library build artifacts
+/Drivers/CMSIS/Lib/
+/Drivers/STM32*/Lib/
+
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore dependency files
+*.d
+*.d.*
+
+# Ignore backup files
+*.bak
+*.backup
+
+# Ignore other common files
+*.swp
+*.swo
+*.patch
+*.diff
