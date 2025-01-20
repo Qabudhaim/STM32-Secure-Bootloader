@@ -52,25 +52,6 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-//#define ACK 0x7A
-//#define NACK 0xA5
-//
-//#define CMD_TOGGLE_LED 0x20
-//#define CMD_ERASE_FLASH 0x21
-//#define CMD_WRITE_FLASH 0x22
-//#define CMD_READ_FLASH  0x23
-//#define CMD_JUMP_TO_APP 0x24
-//#define CMD_FLASHING_DONE 0x25
-//#define CMD_HANDSHAKE_X 0x26
-//#define CMD_HANDSHAKE_Y 0x27
-//#define CMD_RESET 0x28
-//#define CMD_GET_UID 0x29
-//
-//#define APP_START_ADDRESS 0x08020000
-//#define APP_HEADER_SIZE 0x200
-//
-//#define ERROR_CHECKSUM_INVALID 0xE0
-//#define ERROR_HEADER_INVALID 0xE1
 
 #define BOOTLOADER_FLAG_VALUE    0xDEADBEEF
 
@@ -101,9 +82,7 @@ static void MX_UART4_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//uint8_t uartBuffer[64] = {0};
-//Queue uartQueue;
-//uint8_t encryptedUartBuf[64];
+
 
 /* USER CODE END 0 */
 
@@ -115,8 +94,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-//    unsigned char shared_secret[32];
-//    size_t shared_secret_len = sizeof(shared_secret);
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
