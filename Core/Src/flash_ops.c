@@ -116,7 +116,23 @@ void jump_to_application(void) {
     uint32_t msp_value = *(volatile uint32_t*)(APP_START_ADDRESS + APP_HEADER_SIZE);
     uint32_t reset_handler_address = *(volatile uint32_t*)(APP_START_ADDRESS + APP_HEADER_SIZE + 4);
 
+    __disable_irq();
+
+    SysTick->CTRL = 0;
+    HAL_RCC_DeInit();
+    HAL_DeInit();
+
+    for (uint32_t i = 0; i < 8; i++)
+    {
+        NVIC->ICER[i] = 0xFFFFFFFF;
+        NVIC->ICPR[i] = 0xFFFFFFFF;
+    }
+
+    __enable_irq();
+
     __set_MSP(msp_value);
+    __set_PSP(msp_value);
+    __set_CONTROL(0);
     app_reset_handler = (void*)reset_handler_address;
     app_reset_handler();
 } 
